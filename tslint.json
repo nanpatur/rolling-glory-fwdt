@@ -1,0 +1,27 @@
+{
+  "linterOptions": {
+    "exclude": [
+      "**/*.js",
+      "node_modules/**/*"
+    ]
+  },
+  "defaultSeverity": "warning",
+  "rules": {
+    "quotemark": [false],
+    "object-literal-sort-keys": false,
+    "trailing-comma": false,
+    "arrow-parens": false,
+    "ordered-imports": false,
+    "interface-name": [
+      false
+    ],
+    "no-trailing-whitespace": false,
+    "max-line-length": false,
+    "jsx-no-lambda": false,
+    "no-console": false,
+    "no-shadowed-variable": false,
+    "indent": [false],
+    "jsx-no-multiline-js": false,
+    "member-ordering": false
+  }
+}
