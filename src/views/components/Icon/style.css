@@ -1,0 +1,25 @@
+.app-icon {
+  height: 24px;
+  width: 24px;
+  display: inline-block; }
+  .app-icon.instagram {
+    -webkit-mask-image: url("/assets/images/instagram-icon.svg");
+    mask-image: url("/assets/images/instagram-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+  .app-icon.facebook {
+    -webkit-mask-image: url("/assets/images/facebook-icon.svg");
+    mask-image: url("/assets/images/facebook-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+  .app-icon.twitter {
+    -webkit-mask-image: url("/assets/images/twitter-icon.svg");
+    mask-image: url("/assets/images/twitter-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+  .app-icon.white {
+    background-color: #FFFFFF; }
+  .app-icon.green {
+    background-color: #74B71B; }
+  .app-icon.yellow {
+    background-color: #F0D946; }

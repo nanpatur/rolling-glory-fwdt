@@ -1,0 +1,8 @@
+.app-header {
+  padding: 0 100px;
+  height: 100px; }
+  .app-header .header-logo {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translate(0, -50%); }

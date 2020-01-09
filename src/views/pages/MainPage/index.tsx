@@ -1,10 +1,11 @@
 import React from 'react';
+import Container from '../../components/Container';
 
 const MainPage: React.FC<any> = (props) => {
   return (
-    <div>
-      Main Page
-    </div>
+    <Container>
+      Main Page content
+    </Container>
   )
 }
 

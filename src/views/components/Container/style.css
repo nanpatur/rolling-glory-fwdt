@@ -1,0 +1,11 @@
+.app-container {
+  position: relative; }
+  .app-container.full-screen-y {
+    height: 100vh;
+    overflow: auto; }
+  .app-container.full-screen-x {
+    width: 100vw; }
+  .app-container.full-y {
+    height: 100%; }
+  .app-container.full-x {
+    width: 100%; }

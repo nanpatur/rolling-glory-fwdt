@@ -1,0 +1,22 @@
+import React from 'react'
+import Container from '../Container';
+import './style.css';
+import Icon from '../Icon';
+import Text from '../Text';
+
+const Footer: React.FC = () => {
+  return (
+    <Container className='app-footer'>
+      <Container className='social-media-icon' float='left'>
+        <Icon name='instagram' />
+        <Icon name='facebook' />
+        <Icon name='twitter' />
+      </Container>
+      <Container float='right'>
+        <Text.Paragraph size='14'>Terms & Condition | Copyright © 2018. All rights reserved. PT Radya Gita Bahagi</Text.Paragraph>
+      </Container>
+    </Container>
+  )
+}
+
+export default Footer;

@@ -1,0 +1,22 @@
+@import '../../styles/colors';
+
+.app-footer {
+  padding: 0 100px;
+  background-color: $black;
+  color: white;
+  height: 100px;
+  line-height: 100px;
+
+  >.social-media-icon {
+    padding-top: 6px;
+    height: 100%;
+
+    >.app-icon {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('/assets/font/Raleway-Regular.woff2') format('woff2'),
+      url('/assets/font/Raleway-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('/assets/font/Raleway-Bold.woff2') format('woff2'),
+      url('/assets/font/Raleway-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('/assets/font/Raleway-SemiBold.woff2') format('woff2'),
+      url('/assets/font/Raleway-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('/assets/font/Raleway-Medium.woff2') format('woff2'),
+      url('/assets/font/Raleway-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;   
+  font-family: Raleway, sans-serif;     
+}
+
+
+.app-content {
+  padding: 0 100px;
+  height: calc(100vh - 200px);
+}

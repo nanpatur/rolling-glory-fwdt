@@ -1,0 +1,13 @@
+.app-footer {
+  padding: 0 100px;
+  background-color: #232323;
+  color: white;
+  height: 100px;
+  line-height: 100px; }
+  .app-footer > .social-media-icon {
+    padding-top: 6px;
+    height: 100%; }
+    .app-footer > .social-media-icon > .app-icon {
+      margin-right: 30px; }
+      .app-footer > .social-media-icon > .app-icon:last-child {
+        margin-right: 0; }

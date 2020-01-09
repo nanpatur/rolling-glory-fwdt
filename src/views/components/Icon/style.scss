@@ -1,0 +1,34 @@
+@import '../../styles/colors';
+
+$icons: (
+  instagram: '/assets/images/instagram-icon.svg',
+  facebook: '/assets/images/facebook-icon.svg',
+  twitter: '/assets/images/twitter-icon.svg'
+);
+
+$icon-colors: (
+  white: $white,
+  green: $green1,
+  yellow: $yellow1
+);
+
+.app-icon {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+
+  @each $key, $value in $icons {
+    &.#{$key} {
+      -webkit-mask-image: url($value);
+      mask-image: url($value);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+  }
+
+  @each $key, $value in $icon-colors {
+    &.#{$key} {
+      background-color: $value;
+    }
+  }
+}
