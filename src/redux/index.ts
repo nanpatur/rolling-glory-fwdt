@@ -9,8 +9,8 @@ export interface IAppReduxState {
 
 const rootReducer = combineReducers<IAppReduxState>({
   gift: giftReducer
-})
+});
 
-const middleware = composeWithDevTools()
+const middleware = composeWithDevTools();
 
-export const store = createStore(rootReducer, middleware)
+export const store = createStore(rootReducer, middleware);

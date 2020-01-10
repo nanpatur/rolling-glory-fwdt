@@ -1,0 +1,9 @@
+.app-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  
+  >.app-flex-col {
+    margin: 10px;
+    width: calc(25% - 20px);
+  }
+}

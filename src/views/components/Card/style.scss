@@ -1,0 +1,12 @@
+@import '../../styles/colors';
+
+.app-card {
+  border: solid 1px $gray1;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  height: 420px;
+  padding: 17px 20px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}

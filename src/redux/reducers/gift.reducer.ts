@@ -3,7 +3,7 @@ import { IGiftReduxState, giftDefaultState } from "../states/gift.state";
 import { AnyAction } from "redux";
 
 const giftReducer = (state: IGiftReduxState = giftDefaultState, action: AnyAction) => {
-  switch (action.key) {
+  switch (action.type) {
     case SET_GIFT_LIST:
       return {
         ...state,

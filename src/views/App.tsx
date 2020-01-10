@@ -4,9 +4,7 @@ import { Router, Route } from 'react-router';
 import { History, createBrowserHistory } from 'history';
 import MainPage from './pages/MainPage';
 import DetailPage from './pages/DetailPage';
-import Container from './components/Container';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Container, Header, Footer } from './components';
 
 export const history: History = createBrowserHistory()
 

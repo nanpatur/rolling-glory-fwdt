@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
   return (
     <Container className='app-footer'>
       <Container className='social-media-icon' float='left'>
-        <Icon name='instagram' />
-        <Icon name='facebook' />
-        <Icon name='twitter' />
+        <Icon name='instagram' size='20px' />
+        <Icon name='facebook' size='20px' />
+        <Icon name='twitter' size='20px' />
       </Container>
       <Container float='right'>
         <Text.Paragraph size='14'>Terms & Condition | Copyright © 2018. All rights reserved. PT Radya Gita Bahagi</Text.Paragraph>

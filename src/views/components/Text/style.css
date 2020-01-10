@@ -1,29 +1,29 @@
-.app-text-paragraph.size-12 {
+.app-text-paragraph.size-12, .app-text-span.size-12 {
   font-size: 12px; }
 
-.app-text-paragraph.size-14 {
+.app-text-paragraph.size-14, .app-text-span.size-14 {
   font-size: 14px; }
 
-.app-text-paragraph.size-16 {
+.app-text-paragraph.size-16, .app-text-span.size-16 {
   font-size: 16px; }
 
-.app-text-paragraph.size-18 {
+.app-text-paragraph.size-18, .app-text-span.size-18 {
   font-size: 18px; }
 
-.app-text-paragraph.size-20 {
+.app-text-paragraph.size-20, .app-text-span.size-20 {
   font-size: 20px; }
 
-.app-text-paragraph.size-22 {
+.app-text-paragraph.size-22, .app-text-span.size-22 {
   font-size: 22px; }
 
-.app-text-paragraph.weight-regular {
+.app-text-paragraph.weight-regular, .app-text-span.weight-regular {
   font-weight: normal; }
 
-.app-text-paragraph.weight-medium {
+.app-text-paragraph.weight-medium, .app-text-span.weight-medium {
   font-weight: 500; }
 
-.app-text-paragraph.weight-semibold {
+.app-text-paragraph.weight-semibold, .app-text-span.weight-semibold {
   font-weight: 600; }
 
-.app-text-paragraph.weight-bold {
+.app-text-paragraph.weight-bold, .app-text-span.weight-bold {
   font-weight: bold; }

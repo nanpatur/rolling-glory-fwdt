@@ -13,8 +13,6 @@ $icon-colors: (
 );
 
 .app-icon {
-  height: 24px;
-  width: 24px;
   display: inline-block;
 
   @each $key, $value in $icons {

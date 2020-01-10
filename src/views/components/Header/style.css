@@ -1,6 +1,7 @@
 .app-header {
   padding: 0 100px;
-  height: 100px; }
+  height: 100px;
+  border-bottom: solid 1px #D8D8D8; }
   .app-header .header-logo {
     position: absolute;
     left: 100px;

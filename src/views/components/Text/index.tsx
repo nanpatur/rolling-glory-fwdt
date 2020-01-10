@@ -19,8 +19,26 @@ const TextParagraph: React.FC<ITextParagraphProps> = (props) => {
   )
 }
 
+interface ITextSpanProps {
+  size: '12' | '14' | '16' | '18' | '20' | '22';
+  weight?: 'regular' | 'medium' | 'semibold' | 'bold';
+}
+
+const TextSpan: React.FC<ITextSpanProps> = (props) => {
+  const className = classnames(
+    'app-text-span',
+    `size-${props.size}`,
+    `weight-${props.weight || 'regular'}`
+  )
+
+  return (
+    <span className={className}>{props.children}</span>
+  )
+}
+
 const Text = {
-  Paragraph: TextParagraph
+  Paragraph: TextParagraph,
+  Span: TextSpan
 }
 
 export default Text;

@@ -1,14 +1,14 @@
-$p-sizes: 12, 14, 16, 18, 20, 22;
-$p-weights: (regular: normal, medium: 500, semibold: 600, bold: bold);
+$text-sizes: 12, 14, 16, 18, 20, 22;
+$text-weights: (regular: normal, medium: 500, semibold: 600, bold: bold);
 
-.app-text-paragraph {
-  @each $size in $p-sizes {
+.app-text-paragraph, .app-text-span {
+  @each $size in $text-sizes {
     &.size-#{$size} {
       font-size: #{$size}px;
     }
   }
 
-  @each $key, $value in $p-weights {
+  @each $key, $value in $text-weights {
     &.weight-#{$key} {
       font-weight: $value;
     }

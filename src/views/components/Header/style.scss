@@ -1,6 +1,9 @@
+@import '../../styles/colors';
+
 .app-header {
   padding: 0 100px;
   height: 100px;
+  border-bottom: solid 1px $gray1;
 
   .header-logo {
     position: absolute;

@@ -5,6 +5,7 @@ import './style.css';
 interface IIconProps {
   name: 'instagram' | 'facebook' | 'twitter';
   color?: 'white' | 'green' | 'yellow';
+  size: string;
 }
 
 const Icon: React.FC<IIconProps> = (props) => {
@@ -13,8 +14,12 @@ const Icon: React.FC<IIconProps> = (props) => {
     props.name,
     props.color || 'white'
   )
+  const style: React.CSSProperties = {
+    height: props.size,
+    width: props.size
+  }
   return (
-    <i className={className} />
+    <i style={style} className={className} />
   )
 }
 

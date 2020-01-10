@@ -1,21 +1,22 @@
-import { Store } from "redux";
 import { store } from "../redux";
 import { setGiftList, setGiftDetail } from "../redux/actions/gift.action";
 import { IGift } from "../model";
+import api from "../api";
 
 class GiftService {
-  store: Store;
 
-  constructor() {
-    this.store = store;
-  }
-
-  public setGiftList(giftList: IGift[]): void {
-    this.store.dispatch(setGiftList(giftList))
+  public async getGiftList() {
+    try {
+      const { gift } = await api.giftApi.getList()
+      console.error('========== ', store.dispatch(setGiftList(gift)))
+      store.dispatch(setGiftList(gift))
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   public setGiftDetail(gift: IGift): void {
-    this.store.dispatch(setGiftDetail(gift))
+    store.dispatch(setGiftDetail(gift))
   }
 }
 

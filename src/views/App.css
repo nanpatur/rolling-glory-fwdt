@@ -33,5 +33,10 @@
   font-family: Raleway, sans-serif; }
 
 .app-content {
-  padding: 0 100px;
-  height: calc(100vh - 200px); }
+  padding: 50px 90px;
+  min-height: calc(100vh - 200px);
+  background-image: url("/assets/images/background.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-blend-mode: multiply;
+  background-size: contain; }
