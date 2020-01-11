@@ -20,3 +20,16 @@
 .app-detail .detail-desc {
   border-top: 1px solid #D8D8D8;
   width: 100%; }
+
+@media (max-width: 768px) {
+  .app-detail .app-flex-col {
+    flex: 1; }
+    .app-detail .app-flex-col .detail-image {
+      margin: 0 auto; } }
+
+@media (max-width: 414px) {
+  .app-detail .detail-image {
+    width: 280px;
+    height: 280px; }
+  .app-detail .detail-info {
+    max-width: 280px; } }

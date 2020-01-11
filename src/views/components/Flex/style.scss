@@ -1,3 +1,5 @@
+@import '../../styles/scree-size';
+
 $colPerRows: 1, 2, 3, 4;
 
 .app-flex-row {
@@ -37,5 +39,27 @@ $colPerRows: 1, 2, 3, 4;
       width: auto;
     }
   }
+
 }
-  
+
+@media (max-width: $screen-tablet) {
+  .app-flex-row {
+    &.col-per-row-1, &.col-per-row-2, &.col-per-row-3, &.col-per-row-4 {
+      >.app-flex-col {
+        margin: 10px;
+        width: calc(100% / 2 - 20px);
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-mobile) {
+  .app-flex-row {
+    &.col-per-row-1, &.col-per-row-2, &.col-per-row-3, &.col-per-row-4 {
+      >.app-flex-col {
+        margin: 10px;
+        width: calc(100% / 1 - 20px);
+      }
+    }
+  }
+}

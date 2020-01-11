@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/scree-size';
 
 .app-detail {
   .detail-image {
@@ -29,3 +30,28 @@
     width: 100%;
   }
 }
+
+@media (max-width: $screen-tablet) {
+  .app-detail {
+    .app-flex-col {
+      flex: 1;
+      .detail-image {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-mobile) {
+  .app-detail {
+    .detail-image {
+      width: 280px;
+      height: 280px;
+    }
+
+    .detail-info {
+      max-width: 280px;
+    }
+  }
+}
+

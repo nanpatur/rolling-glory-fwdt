@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <Icon name='facebook' size='20px' />
         <Icon name='twitter' size='20px' />
       </Container>
-      <Container float='right'>
+      <Container className='footer-copyright'>
         <Text.Paragraph size='14' color='white'>Terms & Condition | Copyright © 2018. All rights reserved. PT Radya Gita Bahagi</Text.Paragraph>
       </Container>
     </Container>

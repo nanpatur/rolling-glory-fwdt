@@ -1,3 +1,5 @@
+@import './styles/scree-size';
+
 @font-face {
   font-family: 'Raleway';
   src: url('/assets/font/Raleway-Regular.woff2') format('woff2'),
@@ -48,4 +50,10 @@
   background-position: bottom;
   background-blend-mode: multiply;
   background-size: contain;
+}
+
+@media (max-width: $screen-mobile) {
+  .app-content {
+    padding: 20px 20px;
+  }
 }

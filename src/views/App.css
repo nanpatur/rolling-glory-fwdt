@@ -40,3 +40,7 @@
   background-position: bottom;
   background-blend-mode: multiply;
   background-size: contain; }
+
+@media (max-width: 414px) {
+  .app-content {
+    padding: 20px 20px; } }

@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/scree-size';
 
 .app-header {
   padding: 0 100px;
@@ -10,5 +11,17 @@
     left: 100px;
     top: 50%;
     transform: translate((0, -50%))
+  }
+}
+
+@media (max-width: $screen-mobile) {
+  .app-header {
+    padding: 0 20px;
+
+    .header-logo {
+      left: 50%;
+      top: 50%;
+      transform: translate((-50%, -50%))
+    }
   }
 }

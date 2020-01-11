@@ -7,3 +7,11 @@
     left: 100px;
     top: 50%;
     transform: translate(0, -50%); }
+
+@media (max-width: 414px) {
+  .app-header {
+    padding: 0 20px; }
+    .app-header .header-logo {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); } }

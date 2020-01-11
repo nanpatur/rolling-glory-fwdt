@@ -1,11 +1,13 @@
 @import '../../styles/colors';
+@import '../../styles/scree-size';
 
 .app-footer {
   padding: 0 100px;
   background-color: $black;
   color: white;
-  height: 100px;
+  min-height: 100px;
   line-height: 100px;
+  overflow: hidden;
 
   >.social-media-icon {
     padding-top: 6px;
@@ -17,6 +19,38 @@
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+
+  >.footer-copyright {
+    float: right;
+  }
+}
+
+@media (max-width: $screen-tablet) {
+  .app-footer {
+    line-height: 30px;
+    text-align: center;
+    
+    >.social-media-icon {
+      padding-top: 20px;
+      width: 100%;
+    }
+    
+    >.footer-copyright {
+      float: none;
+    }
+  }
+}
+
+@media (max-width: $screen-mobile) {
+  .app-footer {
+    line-height: 100px;
+    >.social-media-icon {
+      padding-top: 6px;
+    }
+    >.footer-copyright {
+      display: none;
     }
   }
 }
