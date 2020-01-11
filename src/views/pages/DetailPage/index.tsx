@@ -80,8 +80,8 @@ const DetailPage: React.FC<IDetailPageProps> = (props) => {
       <StockButton />
       <Break height='24px' />
       <Container style={{ display: 'flex' }}>
-        <Button type='loved' fitContent iconPosition='left'>
-          <Icon name='love' size='20px' color='white' />
+        <Button type='secondary-3' fitContent iconPosition='left'>
+          <Icon name='love-outline' size='20px' color='gray' />
         </Button>
         <Button type={outOfStock ? 'disabled' : 'primary'}>
           <Text.Span size='14'>Redeem</Text.Span>
