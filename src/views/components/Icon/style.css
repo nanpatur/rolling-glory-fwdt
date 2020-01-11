@@ -15,9 +15,23 @@
     mask-image: url("/assets/images/twitter-icon.svg");
     -webkit-mask-size: cover;
     mask-size: cover; }
+  .app-icon.love {
+    -webkit-mask-image: url("/assets/images/love-icon.svg");
+    mask-image: url("/assets/images/love-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+  .app-icon.love-outline {
+    -webkit-mask-image: url("/assets/images/love-icon-outline.svg");
+    mask-image: url("/assets/images/love-icon-outline.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
   .app-icon.white {
     background-color: #FFFFFF; }
   .app-icon.green {
     background-color: #74B71B; }
   .app-icon.yellow {
     background-color: #F0D946; }
+  .app-icon.gray {
+    background-color: #D8D8D8; }
+  .app-icon.red {
+    background-color: #E7246B; }

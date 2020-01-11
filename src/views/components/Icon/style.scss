@@ -3,13 +3,17 @@
 $icons: (
   instagram: '/assets/images/instagram-icon.svg',
   facebook: '/assets/images/facebook-icon.svg',
-  twitter: '/assets/images/twitter-icon.svg'
+  twitter: '/assets/images/twitter-icon.svg',
+  love: '/assets/images/love-icon.svg',
+  love-outline: '/assets/images/love-icon-outline.svg'
 );
 
 $icon-colors: (
   white: $white,
   green: $green1,
-  yellow: $yellow1
+  yellow: $yellow1,
+  gray: $gray1,
+  red: $red2
 );
 
 .app-icon {

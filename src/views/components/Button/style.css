@@ -1,0 +1,47 @@
+.app-button {
+  border: none;
+  border-radius: 45px;
+  width: 150px;
+  cursor: pointer;
+  padding: 0 20px;
+  min-width: 60px;
+  position: relative; }
+  .app-button.medium {
+    height: 45px;
+    line-height: 45px; }
+  .app-button.small {
+    height: 35px;
+    line-height: 35px; }
+  .app-button.primary {
+    background-color: #006A4E;
+    color: #FFFFFF; }
+  .app-button.secondary-1 {
+    background-color: transparent;
+    border: solid 1px #74B71B;
+    color: #74B71B; }
+  .app-button.secondary-2 {
+    background-color: transparent;
+    border: solid 1px #FFFFFF;
+    color: #FFFFFF; }
+  .app-button.secondary-3 {
+    background-color: transparent;
+    border: solid 1px #D8D8D8;
+    color: #D8D8D8; }
+  .app-button.secondary-4 {
+    border: solid 1px #FFFFFF;
+    background-color: #757575;
+    color: #FFFFFF; }
+  .app-button.disabled {
+    border: solid 1px #FFFFFF;
+    background-color: #757575;
+    color: #FFFFFF;
+    cursor: default; }
+  .app-button.full-x {
+    width: 100%; }
+  .app-button.fit-content {
+    width: auto; }
+  .app-button > .app-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%); }

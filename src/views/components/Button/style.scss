@@ -1,0 +1,72 @@
+@import '../../styles/colors';
+
+.app-button {
+  border: none;
+  border-radius: 45px;
+  width: 150px;
+  cursor: pointer;
+  padding: 0 20px;
+  min-width: 60px;
+  position: relative;
+  
+  &.medium {
+    height: 45px;
+    line-height: 45px;;
+  }
+
+  &.small {
+    height: 35px;
+    line-height: 35px;
+  }
+
+  &.primary {
+    background-color: $green3;
+    color: $white;
+  }
+
+  &.secondary-1 {
+    background-color: transparent;
+    border: solid 1px $green1;
+    color: $green1;
+  }
+
+  &.secondary-2 {
+    background-color: transparent;
+    border: solid 1px $white;
+    color: $white;
+  }
+
+  &.secondary-3 {
+    background-color: transparent;
+    border: solid 1px $gray1;
+    color: $gray1;
+  }
+
+  &.secondary-4 {
+    border: solid 1px $white;
+    background-color: $gray3;;
+    color: $white;
+  }
+
+  &.disabled {
+    border: solid 1px $white;
+    background-color: $gray3;;
+    color: $white;
+    cursor: default;
+  }
+
+  &.full-x {
+    width: 100%;
+  }
+
+  &.fit-content {
+    width: auto;
+  }
+
+  >.app-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+  }
+}

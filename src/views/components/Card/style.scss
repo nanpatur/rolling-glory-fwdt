@@ -9,4 +9,91 @@
   padding: 17px 20px;
   background-color: #FFFFFF;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+  >.card-image {
+    width: 200%;
+    margin-left: -50%;
+    text-align: center;
+  }
+
+  .out-of-stock {
+    position: absolute;
+    right: 0;
+    top: 11.5px;
+  }
+
+  >.card-hover {
+    width: 100%;
+    height: 420px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1  ;
+    visibility: hidden;
+    padding: 17px 20px;
+    background-image: url('/assets/images/background-card.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s;
+    -webkit-transition: opacity ease-in-out 0.3s;
+    -moz-transition: opacity ease-in-out 0.3s;
+    transition: opacity ease-in-out 0.3s;
+
+    &.background-gray {
+      background-color: hsla(0, 0%, 85%, 0.6);
+    }
+
+    &.background-green {
+      background-color: hsla(86, 74%, 41%, 0.9);
+      color: $white;
+    }
+
+    >.card-hover-content {
+      position: relative;
+      height: 100%;
+
+      >.app-button {
+        position: absolute;
+        bottom: 17px;
+
+        &.secondary-2 {
+          background-color: $green1;
+        }
+
+        &.fit-content {
+          background-color: transparent;
+          top: 0;
+        }
+      }
+
+      >.app-text-paragraph {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  &:hover {
+    >.card-hover {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  >.is-new-label {
+    position: absolute;
+    top: -9px;
+    right: -25px;
+    background-color: $yellow2;
+    padding: 22px 22px 5px 22px;
+    transform: rotate(45deg);
+    border-radius: 4px;
+    z-index: 2;
+    color: $white;
+  }
 }

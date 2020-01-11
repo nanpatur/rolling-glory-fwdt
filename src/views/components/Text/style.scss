@@ -1,5 +1,8 @@
+@import '../../styles/colors';
+
 $text-sizes: 12, 14, 16, 18, 20, 22;
 $text-weights: (regular: normal, medium: 500, semibold: 600, bold: bold);
+$text-colors: (red: $red1, green: $green1, black: $black, white: $white, gray: $gray2);
 
 .app-text-paragraph, .app-text-span {
   @each $size in $text-sizes {
@@ -11,6 +14,12 @@ $text-weights: (regular: normal, medium: 500, semibold: 600, bold: bold);
   @each $key, $value in $text-weights {
     &.weight-#{$key} {
       font-weight: $value;
+    }
+  }
+
+  @each $key, $value in $text-colors {
+    &.color-#{$key} {
+      color: $value;
     }
   }
 }

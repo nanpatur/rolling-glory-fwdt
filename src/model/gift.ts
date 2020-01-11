@@ -5,8 +5,9 @@ export interface IGift {
   description: string;
   points: number;
   stock: number;
-  images: string[]
-  isNew: number,
-  rating: string,
-  num_reviews: number
+  images?: string[];
+  image?: string;
+  isNew: number;
+  rating: string;
+  num_reviews: number;
 }

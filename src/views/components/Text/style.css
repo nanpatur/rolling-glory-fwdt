@@ -27,3 +27,18 @@
 
 .app-text-paragraph.weight-bold, .app-text-span.weight-bold {
   font-weight: bold; }
+
+.app-text-paragraph.color-red, .app-text-span.color-red {
+  color: #E64580; }
+
+.app-text-paragraph.color-green, .app-text-span.color-green {
+  color: #74B71B; }
+
+.app-text-paragraph.color-black, .app-text-span.color-black {
+  color: #232323; }
+
+.app-text-paragraph.color-white, .app-text-span.color-white {
+  color: #FFFFFF; }
+
+.app-text-paragraph.color-gray, .app-text-span.color-gray {
+  color: #838EAB; }
