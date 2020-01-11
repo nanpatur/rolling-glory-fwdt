@@ -7,6 +7,8 @@ import Image from '../Image';
 import Button from '../Button';
 import Icon from '../Icon';
 import { history } from '../../App';
+import Rating from '../Rating';
+import { giftService } from '../../../services';
 
 interface ICardProps {
   gift: IGift;
@@ -19,18 +21,20 @@ const Card: React.FC<ICardProps> = (props) => {
 
   const goToDetail = () => {
     const slug = gift.name.toLowerCase().split(' ').join('-');
+    giftService.setGiftDetail(gift)
     history.push(`/${slug}`);
   }
 
   const hoverContent = (
     <Container className={cardHoverClassName}>
       <Container className='card-hover-content'>
-        <Button fitContent type='secondary-2' size='small'>
+        <Button fitContent type='secondary-2' size='small' iconPosition='left'>
           <Icon name='love-outline' size='20px' color='white' />
         </Button>
         <Text.Paragraph size='16' weight='medium' color={outOfStock ? 'black' : 'white'}>{gift.name}</Text.Paragraph>
         <Button onCLick={goToDetail} fullX type={outOfStock ? 'secondary-4' : 'secondary-2'} size='small'>
-          <Text.Paragraph size='12' color='white'>View Detail</Text.Paragraph>
+          <Icon name='eye' size='11px' color='white' />&ensp;
+          <Text.Span size='12' color='white'>View Detail</Text.Span>
         </Button>
       </Container>
     </Container>
@@ -47,7 +51,7 @@ const Card: React.FC<ICardProps> = (props) => {
       }
       {hoverContent}
       <Container>
-        <Button fitContent type='secondary-3' size='small'>
+        <Button fitContent type='secondary-3' size='small' iconPosition='left'>
           <Icon name='love-outline' size='20px' color='gray' />
         </Button>
         {outOfStock && (<Text.Span className='out-of-stock' size='12' weight='semibold' color='red'>Out of stock</Text.Span>)}
@@ -60,8 +64,8 @@ const Card: React.FC<ICardProps> = (props) => {
       <Container>
         <Text.Paragraph size='16' weight='medium'>{gift.name}</Text.Paragraph>
         <Icon name='point' size='11px' color='green' />&nbsp;
-        <Text.Span size='14' weight='regular' color='green1'>{gift.points} points</Text.Span><br />
-        {gift.rating} - <Text.Span size='12' color='gray'>{`${gift.num_reviews} reviews`}</Text.Span>
+        <Text.Span size='14' weight='regular' color='green1'>{gift.points} poins</Text.Span><br />
+        <Rating value={gift.rating} iconSize='11px' /> - <Text.Span size='12' color='gray'>{`${gift.num_reviews} reviews`}</Text.Span>
       </Container>
     </Container>
   );

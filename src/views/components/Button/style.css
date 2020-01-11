@@ -8,7 +8,8 @@
   position: relative;
   margin-right: 20px;
   float: left;
-  outline: none; }
+  outline: none;
+  display: table; }
   .app-button.medium {
     height: 45px; }
   .app-button.small {
@@ -50,10 +51,18 @@
     width: 100%; }
   .app-button.fit-content {
     width: auto; }
-  .app-button > .app-icon {
+  .app-button.icon-position-right > .app-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%); }
+  .app-button.icon-position-left > .app-icon {
     position: absolute;
     top: 50%;
     left: 20px;
     transform: translate(0, -50%); }
+  .app-button.icon-position-left > .app-icon {
+    display: table-cell;
+    vertical-align: middle; }
   .app-button:last-child {
     margin-right: 0; }

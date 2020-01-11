@@ -11,6 +11,9 @@ import Breadcrumb from './Breadcrumb';
 import Break from './Break';
 import Tab from './Tab';
 import StockButton from './StockButton';
+import Rating from './Rating';
+import LoadingIndicator from './LoadingIndicator';
+import NoData from './NoData';
 
 export {
   Card,
@@ -25,5 +28,8 @@ export {
   Breadcrumb,
   Break,
   Tab,
-  StockButton
+  StockButton,
+  Rating,
+  LoadingIndicator,
+  NoData
 }

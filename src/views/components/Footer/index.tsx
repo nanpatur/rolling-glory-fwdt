@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         <Icon name='twitter' size='20px' />
       </Container>
       <Container float='right'>
-        <Text.Paragraph size='14'>Terms & Condition | Copyright © 2018. All rights reserved. PT Radya Gita Bahagi</Text.Paragraph>
+        <Text.Paragraph size='14' color='white'>Terms & Condition | Copyright © 2018. All rights reserved. PT Radya Gita Bahagi</Text.Paragraph>
       </Container>
     </Container>
   )

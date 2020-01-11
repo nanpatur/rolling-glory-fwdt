@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Breadcrumb, Image, Text, Icon, Break, Button, Flex, Tab, StockButton } from '../../components';
+import { Container, Breadcrumb, Image, Text, Icon, Break, Button, Flex, Tab, StockButton, Rating, LoadingIndicator, NoData } from '../../components';
 import { IGift } from '../../../model';
 import { RouterProps } from 'react-router';
 import { giftService } from '../../../services';
@@ -27,23 +27,72 @@ const DetailPage: React.FC<IDetailPageProps> = (props) => {
     return function cleanup() {
       giftService.clearGiftDetail();
     };
-  }, [])
+  }, []);
 
   if (!gift) {
     return isLoading ? (
-      <Container>
-        Loading . . .
-      </Container>
+      <LoadingIndicator />
     ) : (
-      <Container>
-        Not Found
-      </Container>
-    )
+      <NoData />
+    );
   }
 
   const imageUrl = gift.image && gift.image || gift.images && gift.images[0] || '';
-  const outOfStock = gift.stock === 0
+  const outOfStock = gift.stock === 0;
+
+  const tabConfigs = [
+    {
+      label: 'Info produk', 
+      content: (
+        <React.Fragment>
+          <Text.Paragraph size='20' color='green2'>RINCIAN</Text.Paragraph>
+          <Break height='25px' />
+          <Text.Paragraph size='14' lineHeight='40px'>
+            <div dangerouslySetInnerHTML={{ __html: gift.description }} />
+          </Text.Paragraph>
+        </React.Fragment>
+      )
+    }
+  ];
   
+  const infoProduct = (
+    <Container className='detail-info'>
+      <Text.Paragraph size='24' weight='bold'>{gift.name}</Text.Paragraph>
+      <Break height='15px' />
+      <Rating value={gift.rating} iconSize='16px' />&ensp;<Text.Span size='14' color='gray'>{`${gift.num_reviews} reviews`}</Text.Span>
+      <Break height='15px' />
+      <Icon name='point' size='20px' color='green' />&nbsp;
+      <Text.Span size='24' weight='semibold' color='green1'>{gift.points} poins</Text.Span>&ensp;
+      {
+        outOfStock ? (
+          <Text.Span size='14' weight='semibold' color='red'>Out of Stock</Text.Span>
+        ) : (
+          <Text.Span size='14' weight='semibold' color='green2'>In Stock</Text.Span>
+        )
+      }
+      <Break height='24px' />
+      <Text.Paragraph size='14' lineHeight='30px'>
+        <div dangerouslySetInnerHTML={{ __html: gift.info }} />
+      </Text.Paragraph>
+      <Break height='24px' />
+      <Text.Paragraph size='14' color='gray'>Jumlah</Text.Paragraph>
+      <Break height='15px' />
+      <StockButton />
+      <Break height='24px' />
+      <Container style={{ display: 'flex' }}>
+        <Button type='loved' fitContent iconPosition='left'>
+          <Icon name='love' size='20px' color='white' />
+        </Button>
+        <Button type={outOfStock ? 'disabled' : 'primary'}>
+          <Text.Span size='14'>Redeem</Text.Span>
+        </Button>
+        <Button type={outOfStock ? 'disabled' : 'secondary-1'}>
+          <Text.Span size='14'>Add to cart</Text.Span>
+        </Button>
+      </Container>
+    </Container>
+  );
+
   return (
     <Container className='app-detail'>
       <Breadcrumb />
@@ -58,60 +107,11 @@ const DetailPage: React.FC<IDetailPageProps> = (props) => {
           </Container>
         </Flex.Col>
         <Flex.Col>
-          <Container className='detail-info'>
-            <Text.Paragraph size='24' weight='bold'>{gift.name}</Text.Paragraph>
-            <Break height='12px' />
-            {gift.rating} - <Text.Span size='14' color='gray'>{`${gift.num_reviews} reviews`}</Text.Span>
-            <Break height='12px' />
-            <Icon name='point' size='20px' color='green' />&nbsp;
-            <Text.Span size='24' weight='semibold' color='green1'>{gift.points} points</Text.Span>&nbsp;
-            {
-              outOfStock ? (
-                <Text.Span size='14' weight='semibold' color='red'>Out of Stock</Text.Span>
-              ) : (
-                <Text.Span size='14' weight='semibold' color='green2'>In Stock</Text.Span>
-              )
-            }
-            <Break height='24px' />
-            <Text.Paragraph size='14' lineHeight='30px'>
-              <div dangerouslySetInnerHTML={{ __html: gift.info }} />
-            </Text.Paragraph>
-            <Break height='24px' />
-            <Text.Paragraph size='14' color='gray'>Jumlah</Text.Paragraph>
-            <Break height='15px' />
-            <StockButton />
-            <Break height='24px' />
-            <Container style={{ display: 'flex' }}>
-              <Button type='loved' fitContent>
-                <Icon name='love' size='20px' color='white' />
-              </Button>
-              <Button type={outOfStock ? 'disabled' : 'primary'}>
-                <Text.Span size='14'>Redeem</Text.Span>
-              </Button>
-              <Button type={outOfStock ? 'disabled' : 'secondary-1'}>
-                <Text.Span size='14'>Add to cart</Text.Span>
-              </Button>
-            </Container>
-          </Container>
+          {infoProduct}
         </Flex.Col>
       </Flex.Row>
       <Break height='24px' />
-      <Tab 
-        tabConfigs={[
-          {
-            label: 'Info produk', 
-            content: (
-              <React.Fragment>
-                <Text.Paragraph size='20' color='green2'>RINCIAN</Text.Paragraph>
-                <Break height='25px' />
-                <Text.Paragraph size='14' lineHeight='40px'>
-                  <div dangerouslySetInnerHTML={{ __html: gift.description }} />
-                </Text.Paragraph>
-              </React.Fragment>
-            )
-          }
-        ]}
-      />
+      <Tab tabConfigs={tabConfigs} />
     </Container>
   )
 }

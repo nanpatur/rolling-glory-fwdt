@@ -11,6 +11,7 @@
   margin-right: 20px;
   float: left;
   outline: none;
+  display: table;
   
   &.medium {
     height: 45px;
@@ -81,11 +82,29 @@
     width: auto;
   }
 
-  >.app-icon {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translate(0, -50%);
+  &.icon-position-right {
+    >.app-icon {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &.icon-position-left {
+    >.app-icon {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &.icon-position-left {
+    >.app-icon {
+      display:table-cell;
+      vertical-align: middle;
+    }
   }
 
   &:last-child {

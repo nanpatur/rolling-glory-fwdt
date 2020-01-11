@@ -7,6 +7,7 @@ interface IButtonProps {
   size?: 'small' | 'medium';
   fullX?: boolean;
   fitContent?: boolean;
+  iconPosition?: 'left' | 'right';
   onCLick?: () => any;
 }
 
@@ -22,7 +23,8 @@ const Button: React.FC<IButtonProps> = (props) => {
     props.type,
     props.size || 'medium',
     {'full-x': props.fullX},
-    {'fit-content': props.fitContent}
+    {'fit-content': props.fitContent},
+    (`icon-position-${props.iconPosition || 'text'}`)
   )
   return (
     <button className={className} onClick={handleOnClick}>

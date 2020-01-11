@@ -1,0 +1,9 @@
+.app-rating {
+  .app-icon {
+    margin-right: 2px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

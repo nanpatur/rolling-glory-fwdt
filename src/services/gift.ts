@@ -14,10 +14,14 @@ class GiftService {
     }
   }
 
+  public setGiftDetail(gift: IGift) {
+    store.dispatch(setGiftDetail(gift))
+  }
+
   public async getGiftDetail(slug: string) {
     try {
       const { gift } = await api.giftApi.getBySlug(slug)
-      store.dispatch(setGiftDetail(gift))
+      this.setGiftDetail(gift)
     } catch (error) {
       console.error(error)      
     }

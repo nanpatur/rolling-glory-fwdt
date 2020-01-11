@@ -1,15 +1,29 @@
-import React, { useEffect } from 'react';
-import { Container, Card, Flex } from '../../components';
+import React, { useEffect, useState } from 'react';
+import { Container, Card, Flex, Text, LoadingIndicator, NoData } from '../../components';
 import { giftService } from '../../../services';
 import { useSelector } from 'react-redux';
 import { IAppReduxState } from '../../../redux';
 
 const MainPage: React.FC<any> = (props) => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const giftList = useSelector((state: IAppReduxState) => state.gift.giftList)
+
   useEffect(() => {
-    giftService.getGiftList()
+    async function getData() {
+      await giftService.getGiftList()
+      setIsLoading(false)
+    }
+
+    getData()
   }, [])
 
-  const giftList = useSelector((state: IAppReduxState) => state.gift.giftList)
+  if (giftList.length === 0) {
+    return isLoading ? (
+      <LoadingIndicator />
+    ) : (
+      <NoData />
+    )
+  }
 
   return (
     <Container>

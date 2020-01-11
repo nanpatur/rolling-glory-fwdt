@@ -30,6 +30,26 @@
     mask-image: url("/assets/images/point-icon.svg");
     -webkit-mask-size: cover;
     mask-size: cover; }
+  .app-icon.full-star {
+    -webkit-mask-image: url("/assets/images/full-star-icon.svg");
+    mask-image: url("/assets/images/full-star-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+  .app-icon.half-star {
+    -webkit-mask-image: url("/assets/images/half-star-icon.svg");
+    mask-image: url("/assets/images/half-star-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+  .app-icon.eye {
+    -webkit-mask-image: url("/assets/images/eye-icon.svg");
+    mask-image: url("/assets/images/eye-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
+  .app-icon.no-data {
+    -webkit-mask-image: url("/assets/images/no-data-icon.svg");
+    mask-image: url("/assets/images/no-data-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
   .app-icon.white {
     background-color: #FFFFFF; }
   .app-icon.green {
