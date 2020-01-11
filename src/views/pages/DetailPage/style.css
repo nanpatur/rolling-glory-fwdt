@@ -1,0 +1,22 @@
+.app-detail .detail-image {
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  margin-right: 40px; }
+  .app-detail .detail-image > .is-new-label {
+    position: absolute;
+    top: -9px;
+    right: -25px;
+    background-color: #DCB81D;
+    padding: 22px 22px 5px 22px;
+    transform: rotate(45deg);
+    border-radius: 4px;
+    z-index: 2;
+    color: #FFFFFF; }
+
+.app-detail .detail-info {
+  max-width: 655px; }
+
+.app-detail .detail-desc {
+  border-top: 1px solid #D8D8D8;
+  width: 100%; }

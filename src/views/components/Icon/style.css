@@ -25,6 +25,11 @@
     mask-image: url("/assets/images/love-icon-outline.svg");
     -webkit-mask-size: cover;
     mask-size: cover; }
+  .app-icon.point {
+    -webkit-mask-image: url("/assets/images/point-icon.svg");
+    mask-image: url("/assets/images/point-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }
   .app-icon.white {
     background-color: #FFFFFF; }
   .app-icon.green {

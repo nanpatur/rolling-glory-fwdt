@@ -1,6 +1,17 @@
 .app-flex-row {
   display: flex;
   flex-wrap: wrap; }
-  .app-flex-row > .app-flex-col {
+  .app-flex-row.col-per-row-1 > .app-flex-col {
     margin: 10px;
-    width: calc(25% - 20px); }
+    width: calc(100% / 1 - 20px); }
+  .app-flex-row.col-per-row-2 > .app-flex-col {
+    margin: 10px;
+    width: calc(100% / 2 - 20px); }
+  .app-flex-row.col-per-row-3 > .app-flex-col {
+    margin: 10px;
+    width: calc(100% / 3 - 20px); }
+  .app-flex-row.col-per-row-4 > .app-flex-col {
+    margin: 10px;
+    width: calc(100% / 4 - 20px); }
+  .app-flex-row.col-per-row-default > .app-flex-col {
+    width: auto; }

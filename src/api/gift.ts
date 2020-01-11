@@ -14,14 +14,14 @@ interface GiftSlugApiResponse {
 
 export interface GiftApi {
   getList: () => Promise<GiftListApiResponse>;
-  getBySlug: () => Promise<GiftSlugApiResponse>;
+  getBySlug: (slug: string) => Promise<GiftSlugApiResponse>;
 }
 
 const prefix = '/gift';
 
 const giftApi: GiftApi = {
   getList: () => apiBase.get(prefix),
-  getBySlug: () => apiBase.get(prefix),
+  getBySlug: (slug: string) => apiBase.get(`${prefix}?slug=${slug}`),
 }
 
 export default giftApi;

@@ -1,0 +1,39 @@
+@import '../../styles/colors';
+
+.app-stock-button {
+  height: 35px;
+  button {
+    width: 32px;
+    height: 35px;
+    border: none;
+    background-color: #F2F2F4;
+    float: left;
+    z-index: 1;
+    outline: none;
+    cursor: pointer;
+
+    span {
+      color: #525F7F;
+    }
+  }
+
+  input {
+    width: 35px;
+    height: 35px;
+    float: left;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    color: #525F7F;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type=number] {
+      -moz-appearance:textfield;
+    }
+  }
+}

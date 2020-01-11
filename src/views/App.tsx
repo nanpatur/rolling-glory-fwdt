@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <Container className='app-content'>
         <Router history={history}>
           <Route exact path='/' component={MainPage} />
-          <Route exact path='/detail/:id' component={DetailPage} />
+          <Route exact path='/:id' component={DetailPage} />
         </Router>
       </Container>
       <Footer />

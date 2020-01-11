@@ -1,0 +1,31 @@
+@import '../../styles/colors';
+
+.app-detail {
+  .detail-image {
+    width: 550px;
+    height: 550px;
+    overflow: hidden;
+    margin-right: 40px;
+
+    >.is-new-label {
+      position: absolute;
+      top: -9px;
+      right: -25px;
+      background-color: $yellow2;
+      padding: 22px 22px 5px 22px;
+      transform: rotate(45deg);
+      border-radius: 4px;
+      z-index: 2;
+      color: $white;
+    }
+  }
+
+  .detail-info {
+    max-width: 655px;
+  }
+
+  .detail-desc {
+    border-top: 1px solid $gray1;
+    width: 100%;
+  }
+}

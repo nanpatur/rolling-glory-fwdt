@@ -8,51 +8,69 @@
   padding: 0 20px;
   min-width: 60px;
   position: relative;
+  margin-right: 20px;
+  float: left;
+  outline: none;
   
   &.medium {
     height: 45px;
-    line-height: 45px;;
   }
 
   &.small {
     height: 35px;
-    line-height: 35px;
   }
 
   &.primary {
     background-color: $green3;
-    color: $white;
+    p, span {
+      color: $white;
+    }
   }
 
   &.secondary-1 {
     background-color: transparent;
     border: solid 1px $green1;
-    color: $green1;
+    p, span {
+      color: $green1;
+    }
   }
 
   &.secondary-2 {
     background-color: transparent;
     border: solid 1px $white;
-    color: $white;
+    p, span {
+      color: $white;
+    }
   }
 
   &.secondary-3 {
     background-color: transparent;
     border: solid 1px $gray1;
-    color: $gray1;
+    p, span {
+      color: $gray1;
+    }
   }
 
   &.secondary-4 {
     border: solid 1px $white;
-    background-color: $gray3;;
-    color: $white;
+    background-color: $gray3;
+    p, span {
+      color: $white;
+    }
   }
 
   &.disabled {
     border: solid 1px $white;
-    background-color: $gray3;;
-    color: $white;
+    background-color: $gray3;
     cursor: default;
+    p, span {
+      color: $white;
+    }
+  }
+
+  &.loved {
+    background-color: $red2;
+    color: $white;
   }
 
   &.full-x {
@@ -68,5 +86,9 @@
     top: 50%;
     left: 20px;
     transform: translate(0, -50%);
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }

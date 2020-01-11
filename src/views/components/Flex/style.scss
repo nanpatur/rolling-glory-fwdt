@@ -1,9 +1,41 @@
+$colPerRows: 1, 2, 3, 4;
+
 .app-flex-row {
   display: flex;
   flex-wrap: wrap;
   
-  >.app-flex-col {
-    margin: 10px;
-    width: calc(25% - 20px);
+  &.col-per-row-1 {
+    >.app-flex-col {
+      margin: 10px;
+      width: calc(100% / 1 - 20px);
+    }
+  }
+
+  &.col-per-row-2 {
+    >.app-flex-col {
+      margin: 10px;
+      width: calc(100% / 2 - 20px);
+    }
+  }
+
+  &.col-per-row-3 {
+    >.app-flex-col {
+      margin: 10px;
+      width: calc(100% / 3 - 20px);
+    }
+  }
+
+  &.col-per-row-4 {
+    >.app-flex-col {
+      margin: 10px;
+      width: calc(100% / 4 - 20px);
+    }
+  }
+
+  &.col-per-row-default {
+    >.app-flex-col {
+      width: auto;
+    }
   }
 }
+  

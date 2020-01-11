@@ -16,6 +16,9 @@
 .app-text-paragraph.size-22, .app-text-span.size-22 {
   font-size: 22px; }
 
+.app-text-paragraph.size-24, .app-text-span.size-24 {
+  font-size: 24px; }
+
 .app-text-paragraph.weight-regular, .app-text-span.weight-regular {
   font-weight: normal; }
 
@@ -31,8 +34,11 @@
 .app-text-paragraph.color-red, .app-text-span.color-red {
   color: #E64580; }
 
-.app-text-paragraph.color-green, .app-text-span.color-green {
+.app-text-paragraph.color-green1, .app-text-span.color-green1 {
   color: #74B71B; }
+
+.app-text-paragraph.color-green2, .app-text-span.color-green2 {
+  color: #006A4E; }
 
 .app-text-paragraph.color-black, .app-text-span.color-black {
   color: #232323; }

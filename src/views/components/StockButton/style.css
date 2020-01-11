@@ -1,0 +1,26 @@
+.app-stock-button {
+  height: 35px; }
+  .app-stock-button button {
+    width: 32px;
+    height: 35px;
+    border: none;
+    background-color: #F2F2F4;
+    float: left;
+    z-index: 1;
+    outline: none;
+    cursor: pointer; }
+    .app-stock-button button span {
+      color: #525F7F; }
+  .app-stock-button input {
+    width: 35px;
+    height: 35px;
+    float: left;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    color: #525F7F; }
+    .app-stock-button input::-webkit-outer-spin-button, .app-stock-button input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+    .app-stock-button input[type=number] {
+      -moz-appearance: textfield; }

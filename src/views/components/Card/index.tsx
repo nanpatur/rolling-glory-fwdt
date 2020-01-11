@@ -19,7 +19,7 @@ const Card: React.FC<ICardProps> = (props) => {
 
   const goToDetail = () => {
     const slug = gift.name.toLowerCase().split(' ').join('-');
-    history.push(`/detail/${slug}`);
+    history.push(`/${slug}`);
   }
 
   const hoverContent = (
@@ -41,7 +41,7 @@ const Card: React.FC<ICardProps> = (props) => {
       {
         !outOfStock && gift.isNew === 1 && (
           <Container className='is-new-label'>
-            <Text.Paragraph size='14' weight='bold'>New</Text.Paragraph>
+            <Text.Paragraph size='14' weight='bold' color='white'>New</Text.Paragraph>
           </Container>
         )
       }
@@ -59,7 +59,8 @@ const Card: React.FC<ICardProps> = (props) => {
       </Container>
       <Container>
         <Text.Paragraph size='16' weight='medium'>{gift.name}</Text.Paragraph>
-        <Text.Paragraph size='14' weight='regular' color='green'>{gift.points} points</Text.Paragraph>
+        <Icon name='point' size='11px' color='green' />&nbsp;
+        <Text.Span size='14' weight='regular' color='green1'>{gift.points} points</Text.Span><br />
         {gift.rating} - <Text.Span size='12' color='gray'>{`${gift.num_reviews} reviews`}</Text.Span>
       </Container>
     </Container>

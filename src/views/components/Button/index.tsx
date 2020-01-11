@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import './style.css';
 
 interface IButtonProps {
-  type: 'primary' | 'secondary-1' | 'secondary-2' | 'secondary-3' | 'secondary-4' | 'disabled';
+  type: 'primary' | 'secondary-1' | 'secondary-2' | 'secondary-3' | 'secondary-4' | 'disabled' | 'loved';
   size?: 'small' | 'medium';
   fullX?: boolean;
   fitContent?: boolean;

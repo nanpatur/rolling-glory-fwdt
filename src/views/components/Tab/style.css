@@ -1,0 +1,12 @@
+.app-tab .tab-label {
+  width: 150px;
+  height: 30px;
+  padding: 0 5px;
+  cursor: pointer; }
+  .app-tab .tab-label.active {
+    border-bottom: 3px solid #74B71B; }
+  .app-tab .tab-label:hover {
+    border-bottom: 3px solid #74B71B; }
+
+.app-tab .tab-content {
+  border-top: 1px solid #D8D8D8; }

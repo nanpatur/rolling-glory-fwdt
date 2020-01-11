@@ -3,11 +3,12 @@ import classnames from 'classnames';
 import './style.css';
 
 interface ITextParagraphProps {
-  size: '12' | '14' | '16' | '18' | '20' | '22';
+  size: '12' | '14' | '16' | '18' | '20' | '22' | '24';
   weight?: 'regular' | 'medium' | 'semibold' | 'bold';
-  color?: 'red' | 'green' | 'black' | 'white';
+  color?: 'red' | 'green1' | 'green2' | 'black' | 'white' | 'gray';
   style?: React.CSSProperties;
   className?: string;
+  lineHeight?: string;
 }
 
 const TextParagraph: React.FC<ITextParagraphProps> = (props) => {
@@ -19,7 +20,8 @@ const TextParagraph: React.FC<ITextParagraphProps> = (props) => {
     `color-${props.color || 'black'}`
   )
   const style: React.CSSProperties = {
-    ...props.style
+    ...props.style,
+    lineHeight: props.lineHeight
   }
 
   return (
@@ -28,11 +30,12 @@ const TextParagraph: React.FC<ITextParagraphProps> = (props) => {
 }
 
 interface ITextSpanProps {
-  size: '12' | '14' | '16' | '18' | '20' | '22';
+  size: '12' | '14' | '16' | '18' | '20' | '22' | '24';
   weight?: 'regular' | 'medium' | 'semibold' | 'bold';
-  color?: 'red' | 'green' | 'black' | 'white' | 'gray';
+  color?: 'red' | 'green1' | 'green2' | 'black' | 'white' | 'gray';
   style?: React.CSSProperties;
   className?: string;
+  lineHeight?: string;
 }
 
 const TextSpan: React.FC<ITextSpanProps> = (props) => {
@@ -44,7 +47,8 @@ const TextSpan: React.FC<ITextSpanProps> = (props) => {
     `color-${props.color || 'black'}`
   )
   const style: React.CSSProperties = {
-    ...props.style
+    ...props.style,
+    lineHeight: props.lineHeight
   }
 
   return (

@@ -13,7 +13,7 @@ const MainPage: React.FC<any> = (props) => {
 
   return (
     <Container>
-      <Flex.Row>
+      <Flex.Row colPerRow='4'>
         {
           giftList.map((gift) => (
             <Flex.Col><Card gift={gift} /></Flex.Col>

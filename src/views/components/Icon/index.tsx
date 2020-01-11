@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import './style.css';
 
 interface IIconProps {
-  name: 'instagram' | 'facebook' | 'twitter' | 'love' | 'love-outline';
+  name: 'instagram' | 'facebook' | 'twitter' | 'love' | 'love-outline' | 'point';
   color?: 'white' | 'green' | 'yellow' | 'gray' | 'red';
   size: string;
 }

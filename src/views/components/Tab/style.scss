@@ -1,0 +1,23 @@
+@import '../../styles/colors';
+
+.app-tab {
+
+  .tab-label {
+    width: 150px;
+    height: 30px;
+    padding: 0 5px;
+    cursor: pointer;
+
+    &.active {
+      border-bottom: 3px solid $green1;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $green1;
+    }
+  }
+
+  .tab-content {
+    border-top: 1px solid $gray1;
+  }
+}

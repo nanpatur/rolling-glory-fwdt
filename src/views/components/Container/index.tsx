@@ -10,10 +10,18 @@ interface IContainer {
   fullX?: boolean;
   fullY?: boolean;
   height?: string;
+  width?: string;
   float?: 'left' | 'right';
+  onClick?: () => any;
 }
 
 const Container: React.FC<IContainer> = (props) => {
+  const handleOnClick = () => {
+    if (props.onClick) {
+      props.onClick();
+    }
+  }
+
   const className = classnames(
     'app-container',
     props.className,
@@ -25,10 +33,11 @@ const Container: React.FC<IContainer> = (props) => {
   const style: React.CSSProperties = {
     ...props.style,
     height: props.height,
+    width: props.width,
     float: props.float
   }
   return (
-    <div className={className} style={style}>
+    <div className={className} style={style} onClick={handleOnClick}>
       {props.children}
     </div>
   )

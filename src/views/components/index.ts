@@ -7,6 +7,10 @@ import Image from './Image';
 import Text from './Text';
 import Flex from './Flex';
 import Button from './Button';
+import Breadcrumb from './Breadcrumb';
+import Break from './Break';
+import Tab from './Tab';
+import StockButton from './StockButton';
 
 export {
   Card,
@@ -17,5 +21,9 @@ export {
   Image,
   Text,
   Flex,
-  Button
+  Button,
+  Breadcrumb,
+  Break,
+  Tab,
+  StockButton
 }
